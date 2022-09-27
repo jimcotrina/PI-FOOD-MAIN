@@ -47,8 +47,4 @@ export default function Detail(props) {
   );
 }
 
-/* 
-(imagen, nombre, tipo de plato y tipo de dieta)
-Resumen del plato
-Nivel de "comida saludable" (health score)
-Paso a paso */
+
