@@ -1,0 +1,24 @@
+.contenedor-detail {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.contenedor-2 {
+  width: 900px;
+  height: 850px;
+  background: #ccc;
+  overflow: hidden;
+}
+
+.img-detail img {
+  width: 100%;
+  height: auto;
+}
+
+
