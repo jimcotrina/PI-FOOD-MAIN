@@ -1,7 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRecipes, orderByName, getHealthScore, filterDiets } from '../actions';
+import {
+  getRecipes,
+  orderByName,
+  getHealthScore,
+  filterDiets,
+} from '../actions';
 import { Link } from 'react-router-dom';
 import SeachBar from './SearchBar';
 import Card from './Card';
@@ -75,10 +80,16 @@ export default function Home() {
             RELOAD ALL RECIPES
           </button>
           <select onChange={(e) => handleSort(e)}>
+            <option value="" disabled selected hidden>
+              Sort by name
+            </option>
             <option value="A-Z">A to Z</option>
             <option value="Z-A">Z to A</option>
           </select>
           <select onChange={(e) => handleHealthScore(e)}>
+            <option value="" disabled selected hidden>
+              Health Score
+            </option>
             <option value="L-H">Low Health</option>
             <option value="H-L">High Health</option>
           </select>
@@ -109,7 +120,7 @@ export default function Home() {
                   <Card
                     key={el.id}
                     name={el.name}
-                    image={el.image} //<img src='url...'/>
+                    image={el.image}
                     healthScore={el.healthScore}
                     diets={el.diets}
                   />

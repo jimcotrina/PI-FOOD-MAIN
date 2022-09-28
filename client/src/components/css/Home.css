@@ -1,15 +1,11 @@
-h1 {
-  color: #00539f;
-  text-shadow: 5px 5px 2px black;
-  font-size: 60px;
-}
-
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   align-items: center;
   position: fixed;
-  top: 5px;
+  width: 100vw;
+  height: 120px;
+  top: 3px;
   left: 2px;
   right: 2px;
   list-style: none;
@@ -21,18 +17,13 @@ h1 {
 }
 
 .createRecipe {
-  display: inline-flex;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #00539f;
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
 }
 
 .filters {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   top: 110px;

@@ -6,11 +6,13 @@ export default function LandingPage() {
   return (
     <div className="landing-page">
       <div className="title-lp">
-        <h1>Welcome</h1>
+        <h1>HENRY FOOD</h1>
       </div>
-      <Link to="/home">
-        <button>Ingresar</button>
-      </Link>
+      <div>
+        <Link to="/home">
+          <button className="button-lp">ENTER</button>
+        </Link>
+      </div>
     </div>
   );
 }

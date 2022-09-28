@@ -23,6 +23,7 @@ const getApiInfo = async () => {
       image: el.image,
       healthScore: el.healthScore,
       summary: el.summary,
+      dishTypes: el.dishTypes,
       diets: el.diets,
       steps: el.analyzedInstructions[0]?.steps.map((el) => {
         return {
@@ -78,21 +79,25 @@ router.get('/diets', async (req, res) => {
 
 //post
 
-router.post('/recipes', async (req, res) => {
-  const { name, summary, healthScore, image, steps, diets } = req.body;
-  let recipeCreated = await Recipe.create({
-    name,
-    summary,
-    healthScore,
-    image,
-    steps,
+try {
+  router.post('/recipes', async (req, res) => {
+    const { name, summary, healthScore, image, steps, diets } = req.body;
+    let recipeCreated = await Recipe.create({
+      name,
+      summary,
+      healthScore,
+      image,
+      steps,
+    });
+    let dietDb = await Diet.findAll({
+      where: { name: diets },
+    });
+    recipeCreated.addDiet(dietDb);
+    res.send('recipe created successfully');
   });
-  let dietDb = await Diet.findAll({
-    where: { name: diets },
-  });
-  recipeCreated.addDiet(dietDb);
-  res.send('recipe created successfully');
-});
+} catch (error) {
+  console.log(error);
+}
 
 router.get('/recipes/:id', async (req, res) => {
   const id = req.params.id;

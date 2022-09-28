@@ -1,0 +1,52 @@
+.container-form {
+  position: relative;
+  height: 100vh;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.title {
+  display: inline-block;
+  height: 50px;
+  width: 350px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.healthScore {
+  display: inline-block;
+  height: 100px;
+  width: 190px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.summary {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.steps {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.select-diets {
+  display: inline-block;
+  height: 300px;
+  width: 190px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+input,
+textarea,
+select {
+  font: 15px 'handwriting', cursive, sans-serif;
+}

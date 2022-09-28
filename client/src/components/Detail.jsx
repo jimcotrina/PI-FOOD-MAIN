@@ -20,7 +20,7 @@ export default function Detail(props) {
         <div className="contenedor-2">
           <div className="img-detail">
             <img
-              src={myRecipe[0].image ? myRecipe[0].image : myRecipe[0].image}
+              src={myRecipe[0].image ? myRecipe[0].image : myRecipe[0].img}
               alt=""
             />
           </div>
@@ -29,8 +29,8 @@ export default function Detail(props) {
           </Link>
           <h1>{myRecipe[0].name}</h1>
           <h2>Health Score: ♥ {myRecipe[0].healthScore}</h2>
-          <h2>{myRecipe[0].dishTypes}</h2>
-          <h2>Diets: {myRecipe[0].diets}</h2>
+          <h2>Dishtypes: {myRecipe[0].dishTypes.join(' - ')}</h2>
+          <h2>Diets: {myRecipe[0].diets.join(' - ')}</h2>
           <h2>Summary:</h2>
           <p>{myRecipe[0].summary.replaceAll(/<[^>]*>?/g, '')}</p>
           <h2>Instruccions:</h2>
@@ -46,5 +46,3 @@ export default function Detail(props) {
     </div>
   );
 }
-
-
